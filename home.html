@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
+		rel='stylesheet'>
+	<link rel='icon' href='Images/logo.png' />
+	<link href='home_ext.css' rel='stylesheet'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src="js//Plugins/jquery.cookie-1.4.1.min.js"></script>
+	<script>
+		if (!$.cookie('logged')) {
+			alert('You are Not logged in! Redirecting to Login Page!');
+			document.location = 'index.html';
+		}
+	</script>
+	<script src='js/home.js'></script>
+	<title>Home Page</title>
+</head>
+
+<body>
+	<header>
+		<div id='head'>
+			<div class='head_txt' id='head_one' draggable='false'>
+				<img draggable='false' style='margin-right: 8px;' src='Images/logo.png' alt='logo' height='30px'>
+				Mac App Store
+			</div>
+			<a href='home.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Home
+				</div>
+			</a>
+			<a href='music.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Music
+				</div>
+			</a>
+			<a href='purchased.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Purchased
+				</div>
+			</a>
+			<form method='post' action='sign_out.php' draggable='false'>
+				<input draggable='false' type='submit' style='background: none; border: none;'
+					onclick='localStorage.clear();' class='head_txt' value='Sign Out'>
+			</form>
+			<a href='' id='search_a' draggable='false'>
+				<div class='head_txt' id='search_app' draggable='false'>
+					<img style='margin-right: 8px' draggable='false' src='Images/search.png' alt='logo' height='19px'>
+					Search
+				</div>
+			</a>
+		</div>
+	</header>
+	<main>
+		<div class='video_container'>
+			<a target='_blank' draggable='false'
+				href='https://www.apple.com/newsroom/2020/12/apple-presents-app-store-best-of-2020-winners/'>
+				<video width=977px src='Images/Home/home_screen_vid.mov' autoplay loop></video>
+			</a>
+		</div class='video_container' id='c2'>
+		<div class='featured_container'>
+			<a href='app.html' draggable='false' onclick='localStorage.setItem("app_id", 975937182)'>
+				<div class='featured'>
+					<div class='f1'>
+						<p class='best'>BEST OF 2020</p>
+						<p class='aoy'>App of the Year:</p>
+						<p class='aoy1'>Fantastical</p>
+						<p class='aoyd'>A classic calendar transformed
+							itself in 2020.</p>
+					</div>
+					<div class='f2'>
+						<img class='f2_img' draggable='false' src='Images/Home/f1.png'>
+					</div>
+				</div>
+			</a>
+
+			<a href='app.html' draggable='false' onclick='localStorage.setItem("app_id", 1508191454)'>
+				<div class='featured'>
+					<div class='f1'>
+						<p class='best'>BEST OF 2020</p>
+						<p class='aoy'>Game of the Year:</p>
+						<p class='aoy1'>Disco Elisium</p>
+						<p class='aoyd'>Discover your true self in this
+							inventive RPG.</p>
+					</div>
+					<div class='f2'>
+						<img class='f2_img' draggable='false' src='Images/Home/f3.png'>
+					</div>
+				</div>
+			</a>
+
+			<a href='app.html' draggable='false' onclick='localStorage.setItem("app_id", 1465346522)'>
+				<div class='featured'>
+					<div class='f1'>
+						<p class='best'>BEST OF 2020</p>
+						<p class='aoy'>Apple Arcade Game</p>
+						<p class='aoy1'>of the Year</p>
+						<p class='aoyd'>Sasquatch creeps beyond the
+							campground and into our regular
+							rotation.</p>
+					</div>
+					<div class='f2'>
+						<img class='f2_img' draggable='false' src='Images/Home/f2.png'>
+					</div>
+				</div>
+			</a>
+
+		</div>
+		<div class='div_cont'>
+			<hr class='div_hr'>
+			<p class='div_contp'>Updated for Big Sur </p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl1'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr1'>
+				<div class='app_list_in' id='app_list_1'>
+
+					<!-- <div class='app_block' id='a' draggable='false'>
+						<div class='app_b'>
+							<div class='app_b1'>
+								<div class='app_icon_div'>
+									<img class='app_home_img' draggable='false' src='Images/a.png'>
+								</div>
+								<div class='app_info_div'>
+									<p class='app_info_title'>1Password - Password Manager</p>
+									<p class='app_info_des'>photoo</p>
+								</div>
+								<a href='app.html'>
+									
+									<div class='view_button' draggable='false' >
+										<input type='hidden' name='app_id' value='' />
+										VIEW
+									</div>
+								</a>
+							</div>
+						</div>
+						
+						<div class='app_b'>
+							<div class='app_b1'>
+								<div class='app_icon_div'>
+									<img class='app_home_img'  draggable='false'src='Images/a.png'>
+								</div>
+								<div class='app_info_div'>
+									<p class='app_info_title'>iMovie</p>
+									<p class='app_info_des'>photoo</p>
+								</div>
+								<a href='app.html'>
+									<div class='view_button' draggable='false' >VIEW</div>
+								</a>
+							</div>
+						</div>
+					</div> -->
+
+				</div>
+			</div>
+		</div>
+		<div class='div_banner'>
+			<hr>
+			<p class='div_contp'>Work Smarter</p>
+			<div class='banners_container_main'>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1508732804)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-1-1.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>GET STARTED</p>
+						<p class='banner_info2'>Make Math Easy</p>
+						<p class='banner_info3'>Soulver brilliantly unites numbers and words.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1510445899)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-1-2.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>FEATURED APP</p>
+						<p class='banner_info2'>Easy Remote Meetings</p>
+						<p class='banner_info3'>Meeter puts your video meetings a <br>
+							click away.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 462054704)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-1-3.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>LEVEL UP</p>
+						<p class='banner_info2'>Change Your Word View</p>
+						<p class='banner_info3'>Get a fresh take with Microsoft <br>
+							Word's versatile views.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1026349850)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-1-4.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>GET STARTED</p>
+						<p class='banner_info2'>Copy and Paste Better</p>
+						<p class='banner_info3'>Save your Clipboard history and <br>
+							favorite snippets.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 425424353)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-1-5.png' class='banner_img' draggable='false'>
+						<p class='banner_info1' draggable='false'> MASTER YOUR MAC</p>
+						<p class='banner_info2'>Give Your Files Some Zip</p>
+						<p class='banner_info3'>Creating archives is easy in macOS.</p>
+					</div>
+				</a>
+
+			</div>
+
+		</div>
+		<div class='div_cont'>
+			<hr class='div_hr'>
+			<p class='div_contp'>Essential Safari Extensions</p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl2'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr2'>
+				<div class='app_list_in' id='app_list_2'>
+
+				</div>
+			</div>
+		</div>
+		<div class='div_banner'>
+			<hr>
+			<p class='div_contp'>Be Creative</p>
+			<div class='banners_container_main'>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1319884285)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-2-1.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>QUICK FIX</p>
+						<p class='banner_info2'>Obscure Just Part of a Pic</p>
+						<p class='banner_info3'>Hide personal details with these apps.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1464728589)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-2-2.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>GET STARTED</p>
+						<p class='banner_info2'>Podcast Go!</p>
+						<p class='banner_info3'>Perfect your show with these apps.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 945991770)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-2-3.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>FEATURED APP</p>
+						<p class='banner_info2'>Create Photo Collages</p>
+						<p class='banner_info3'>Posterino gives your pics a whole new
+							look.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1289583905)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-2-4.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>QUICK FIX</p>
+						<p class='banner_info2'>Enhance Your Photos</p>
+						<p class='banner_info3'>These Pixelmator Pro tools can help.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 881418622)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-2-5.png' class='banner_img' draggable='false'>
+						<p class='banner_info1' draggable='false'>TIPS FROM A PRO</p>
+						<p class='banner_info2'>Publish Like a Pro</p>
+						<p class='banner_info3'>Jackie Wyant on her favorite Affinity <br>
+							Publisher tips.</p>
+					</div>
+				</a>
+
+			</div>
+
+		</div>
+		<div class='div_cont'>
+			<hr class='div_hr'>
+			<p class='div_contp'>Top Free Apps</p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl3'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr3'>
+				<div class='app_list_in' id='app_list_3'>
+
+				</div>
+			</div>
+		</div>
+		<div class='div_cont'>
+			<hr>
+			<p class='div_contp'>Top Free Games</p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl4'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr4'>
+				<div class='app_list_in' id='app_list_4'>
+				</div>
+			</div>
+		</div>
+		<div class='div_banner'>
+			<hr>
+			<p class='div_contp'>Ready, Set, Play!</p>
+			<div class='banners_container_main'>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 423984210)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-3-1.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>LET'S PLAY</p>
+						<p class='banner_info2'>Play Something Deep</p>
+						<p class='banner_info3'>There's real depth in this game.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1287752517)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-3-2.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>FEATURED GAME</p>
+						<p class='banner_info2'>Catch Some Serene Air</p>
+						<p class='banner_info3'>Glide through Alto's Adventure.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1496761174)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-3-3.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>FEATURED GAME</p>
+						<p class='banner_info2'>Embrace Your Inner Viking!</p>
+						<p class='banner_info3'>Charge into Oddmar's brilliant world.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 481629890)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-3-4.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>FEATURED GAME</p>
+						<p class='banner_info2'>Great With Controllers</p>
+						<p class='banner_info3'>Use your favorite console controller with
+							your Mac.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1032750660)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-3-5.png' class='banner_img' draggable='false'>
+						<p class='banner_info1' draggable='false'>COLLECTION</p>
+						<p class='banner_info2'>Retro-Gaming Reborn</p>
+						<p class='banner_info3'>Old favorite. New tricks.</p>
+					</div>
+				</a>
+
+			</div>
+
+		</div>
+		<div class='div_cont'>
+			<hr class='div_hr'>
+			<p class='div_contp'>Top Paid Apps</p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl5'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr5'>
+				<div class='app_list_in' id='app_list_5'>
+
+				</div>
+			</div>
+		</div>
+		<div class='div_cont'>
+			<hr>
+			<p class='div_contp'>Top Paid Games</p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl6'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr6'>
+				<div class='app_list_in' id='app_list_6'>
+
+				</div>
+			</div>
+		</div>
+		<div class='div_banner'>
+			<hr>
+			<p class='div_contp'>Developer Corner</p>
+			<div class='banners_container_main'>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1461823255)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-4-1.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>APPLE DESIGN AWARDS</p>
+						<p class='banner_info2'>The Telltale Heart</p>
+						<p class='banner_info3'>To create Sayonara Wild Hearts, Simon
+							Flesser simply listened to it.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1475643220)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-4-2.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>MEET THE DEVELOPER</p>
+						<p class='banner_info2'>AssistiveWare</p>
+						<p class='banner_info3'>He helped a friend and countless others.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 1496833156)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-4-3.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>GET STARTED</p>
+						<p class='banner_info2'>Learn to Code in 7 Days</p>
+						<p class='banner_info3'>Swift Playgrounds teaches the basics.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 889428659)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-4-4.png' class='banner_img' draggable='false'>
+						<p class='banner_info1'>FEATURED APP</p>
+						<p class='banner_info2'>Go Deep With Graphics</p>
+						<p class='banner_info3'>Precisely measure, inspect, and test with
+							xScope.</p>
+					</div>
+				</a>
+				<a draggable='false' href='app.html' onclick='localStorage.setItem("app_id", 993487541)'>
+					<div class='banners_container'>
+						<img src='Images/Home/banner-4-5.png' class='banner_img' draggable='false'>
+						<p class='banner_info1' draggable='false'>MEET THE DEVELOPER</p>
+						<p class='banner_info2'>The Carrot and the Shtick</p>
+						<p class='banner_info3'>Brian Mueller can even make weather
+							funny.</p>
+					</div>
+				</a>
+
+			</div>
+
+		</div>
+		<div class='div_cont'>
+			<hr class='div_hr'>
+			<p class='div_contp'>Editor's Choice</p>
+			<div class='app_list'>
+				<img src='Images/Home/left.png' draggable='false' class='scroll_left' id='scl7'>
+				<img src='Images/Home/right.png' draggable='false' class='scroll_right' id='scr7'>
+				<div class='app_list_in' id='app_list_7'>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer draggable='false'>
+		<a href='https://appleid.apple.com/faq' draggable='false'>
+			<span class='foot'>FAQ</span></a> <span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/support/systemstatus/'><span class='foot'>System Status</span></a>
+		<span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/privacy/'><span class='foot'>Privacy
+				Policy</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/legal/internet-services/icloud/'><span class='foot'> Terms &amp;
+				Conditions</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class='foot'>Copyright
+			&copy; 2020 Bikram
+			Chatterjee. All rights reserved.</span>
+	</footer>
+</body>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+* {
+	color: white;
+	font-family: Montserrat, 'sf', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	margin: 0px;
+}
+
+html,
+body {
+	background: url('Images/Login/back.png');
+	background-color: black;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	height: 100%;
+	margin: 0px;
+	min-height: 890px;
+	min-width: 630px;
+}
+
+header {
+	display: flex;
+	width: 100%;
+	height: 44px;
+	background-color: black;
+	align-items: center
+}
+
+
+main {
+	align-items: center;
+	display: flex;
+	font-size: 50px;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 91.2%;
+
+}
+
+.login {
+	align-items: center;
+	display: flex;
+	font-size: 50px;
+	justify-content: center;
+	margin-bottom: 10px;
+	margin-top: 10px
+}
+
+a {
+	text-decoration: none
+}
+
+form {
+	display: block;
+	width: 328px;
+}
+
+span {
+	color: #808080;
+
+}
+
+footer {
+	align-items: center;
+	color: #808080;
+	display: flex;
+	height: 19px;
+	justify-content: center;
+	padding-bottom: 15px;
+	padding-top: 5px;
+	line-height: 0px;
+}
+
+#head_img {
+	margin-left: 16px;
+	opacity: 70%
+}
+
+#head_img:hover {
+	opacity: 100%
+}
+
+#faq_logo {
+	float: right;
+	left: -16px;
+	opacity: 70%;
+	position: relative;
+}
+
+#faq_logo:hover {
+	opacity: 100%
+}
+
+#in_email,
+#in_pass {
+	border: 1px solid #868686;
+	border-radius: 6px 6px 0px 0px;
+	box-sizing: border-box;
+	color: rgb(73, 73, 73);
+	font-family: 'sf';
+	font-size: 17px;
+	height: 42px;
+	line-height: 22px;
+	padding: 0px 15px 0px 15px;
+	text-align: left;
+	width: 328px
+}
+
+#in_pass {
+	border-radius: 0px 0px 6px 6px;
+	border-top: 0px;
+	padding-right: 43px
+}
+
+#in_email:focus {
+	border: solid 3px #227cce;
+	outline: none;
+}
+
+#in_pass:focus {
+	border: solid 3px #227cce;
+	outline: none;
+}
+
+#submit_login {
+	bottom: 35px;
+	left: 290px;
+	position: relative;
+}
+
+#create_one {
+	color: #317ada;
+	font-size: 14px;
+	margin: 0px
+}
+
+#create_one:hover {
+	text-decoration: underline
+}
+
+#register {
+	background-color: black;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 0px 3px 5px #2E79E5;
+	box-sizing: border-box;
+	display: block;
+	min-height: 527px;
+	width: 640px;
+	overflow: scroll
+}
+
+#reg_logo {
+	left: -300px;
+	position: relative;
+	top: 10px
+}
+
+#reg_head {
+	display: block;
+	height: 93px;
+	align-content: center;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	background-color: black
+}
+
+#reg_head_text {
+	display: block;
+	font-size: 32px;
+	font-weight: 500;
+	position: relative;
+	top: 5px
+}
+
+#regp1 {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	box-sizing: border-box;
+	height: 80px;
+	line-height: 25px;
+	padding-top: 30px
+}
+
+#back {
+	color: #227CCE;
+	font-size: 16px
+}
+
+#back:hover {
+	text-decoration: underline;
+}
+
+#form_id {
+	min-height: 449px;
+	width: 100%
+}
+
+#form_main {
+	height: 388px;
+	background-color: rgb(27, 27, 27);
+}
+
+.form_input {
+	display: flex;
+	height: 76px;
+	margin-left: 90px;
+	margin-right: 90px;
+	margin-top: 20px;
+	width: 460px;
+}
+
+.form_field {
+	background-color: white;
+	border: 1px solid #868686;
+	border-radius: 4px 4px 4px 4px;
+	height: 55px;
+	position: relative;
+	opacity: 95%;
+	overflow: hidden;
+	width: 225px;
+}
+
+#email_field,
+#password_field {
+	top: 2px;
+}
+
+.placeholder {
+	color: #9c9c9c;
+	display: none;
+	font-family: 'sf', sans-serif;
+	font-size: 12px;
+	margin-left: 16.2px;
+	position: relative;
+	top: 10px
+}
+
+
+#first_name,
+#last_name,
+#email,
+#password {
+	border: 0px;
+	bottom: 7px;
+	color: #0c0c0c;
+	font-family: 'sf', sans-serif;
+	font-size: 17px;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-top: 18px;
+	margin-bottom: 10px;
+	outline: none;
+	padding: 0px;
+	padding-bottom: 1px;
+	position: relative;
+	width: 194px;
+	max-height: 38px;
+	text-align: left;
+	overflow: hidden;
+	top: 0px;
+	/*-6 */
+}
+
+#email,
+#password {
+	width: 426px
+}
+
+#foot_form {
+	background-color: black;
+	display: block;
+	width: 195px;
+	height: 35px;
+	padding-bottom: 14px;
+	padding-left: 425px;
+	padding-right: 20px;
+	padding-top: 15px;
+
+}
+
+#cancel,
+#submit_reg {
+	background: linear-gradient(#317BB6, #2E79E5);
+	border: 1px solid #868686;
+	border-radius: 4px 4px 4px 4px;
+	color: white;
+	font-size: 15px;
+	height: 35px;
+	opacity: 90%;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+	width: 84px;
+
+}
+
+#cancel {
+	background: white;
+	color: #227cce
+}
+
+#cancel:hover,
+#submit_reg:hover {
+	opacity: 100%;
+}
+
+.form_text::placeholder {
+	color: rgb(222, 7, 28)
+}
+
+#form_input_email {
+	margin-top: 14px;
+}
+
+.error {
+	color: rgb(222, 7, 28);
+	display: none;
+	font-size: 10px;
+	left: 13px;
+	letter-spacing: 0.16099999690055847px;
+	position: relative
+}
+
+#email_error,
+#password_error {
+	left: 3px;
+	top: 8px
+}
+
+#first_name_error {
+	left: 93px;
+	top: -14px
+}
+
+#last_name_error {
+	left: 218px;
+	top: -14px
+}
+
+#submit_reg {
+	left: 10px;
+	position: relative;
+}
+
+@font-face {
+	font-family: sf;
+	src: url(Fonts/SFProDisplay-Light.ttf)
+}

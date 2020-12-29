@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Apple Music</title>
+  <link rel='icon' href='Images/apple-music.png' />
+  <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
+    rel='stylesheet'>
+  <link rel='stylesheet' href='styles.css'>
+  <link rel='stylesheet' href='music.css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="js//Plugins/jquery.cookie-1.4.1.min.js"></script>
+  <script>
+		if (!$.cookie('logged')) {
+			alert('You are Not logged in! Redirecting to Login Page!');
+			document.location = 'index.html';
+		}
+	</script>
+  <script src='js/music.js'></script>
+</head>
+
+<body>
+  <header>
+    <div id='head'>
+      <div class='head_txt' id='head_one' draggable='false'>
+        <img draggable='false' style='margin-right: 8px;' src='Images/logo.png' alt='logo' height='30px'>
+        Mac App Store
+      </div>
+      <a href='home.html' draggable='false'>
+        <div class='head_txt' draggable='false'>
+          Home
+        </div>
+      </a>
+      <a href='music.html' draggable='false'>
+        <div class='head_txt' draggable='false'>
+          Music
+        </div>
+      </a>
+      <a href='purchased.html' draggable='false'>
+        <div class='head_txt' draggable='false'>
+          Purchased
+        </div>
+      </a>
+      <form method='post' action='sign_out.php' draggable='false'>
+        <input draggable='false' type='submit' style='background: none; border: none;' onclick='localStorage.clear();'
+          class='head_txt' value='Sign Out'>
+      </form>
+      <a href='' id='search_a' draggable='false'>
+        <div class='head_txt' id='search_app' draggable='false'>
+          <img style='margin-right: 8px' draggable='false' src='Images/search.png' alt='logo' height='19px'>
+          Search
+        </div>
+      </a>
+    </div>
+  </header>
+  
+  <main>
+
+    <img draggable='false' src='Images/apple-music.png' style="margin-top: 100px;margin-bottom: 30px;" width=300px>
+    <img draggable='false' src='Images/m.png' width=100px style="position: relative; bottom: 250px; left: 35px">
+
+    <div>
+      <input id='music_search' placeholder='Enter artist, song, or album.'><br>
+      <img id='search_m' draggable='false' style='margin-right: 8px; position: relative; top: -85px; left: 10px;'
+        src='Images/search.png' alt='logo' height='30px'>
+    </div>
+    <div></div>
+    <music>
+
+
+      <p id='music_header'>Latest Songs<hr style='margin-bottom: 30px'>
+      </p>
+      
+    
+      <div id='music_main'>
+
+         <!-- <div id='music_main_content'>
+          
+          <div class='music_content'>
+            <img class='album_art' src='Images/art.png'>
+            <audio src='z.mp3' ></audio>
+            <img class='play' src='Images/play.png' >
+            <img class='pause' src='Images/pause.png' >
+            <p class='song_title'>This is my song</p>
+            <p class='artist'>Singer</p>
+          </div>
+          
+          <div class='music_content'>
+            <img class='album_art' src='Images/art.png'>
+            <audio src='z.mp3' controls></audio>
+            <p class='song_title'>This is my song</p>
+            <p class='artist'>Singer</p>
+          </div>
+          <div class='music_content'>
+            <img class='album_art' src='Images/art.png'>
+            <audio src='z.mp3' controls></audio>
+            <p class='song_title'>This is my song</p>
+            <p class='artist'>Singer</p>
+          </div>
+          <div class='music_content'>
+            <img class='album_art' src='Images/art.png'>
+            <audio src='z.mp3' controls></audio>
+            <p class='song_title'>This is my song</p>
+            <p class='artist'>Singer</p>
+          </div>
+          <div class='music_content'>
+            <img class='album_art' src='Images/art.png'>
+            <audio src='z.mp3' controls></audio>
+            <p class='song_title'>This is my song</p>
+            <p class='artist'>Singer</p>
+          </div>
+           -->
+      </div>
+    </music>
+  </main>
+
+  <footer draggable='false' class='footer'>
+    <a href='https://appleid.apple.com/faq' draggable='false'>
+      <span class='foot'>FAQ</span></a> <span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+      href='https://www.apple.com/support/systemstatus/'><span class='foot'>System Status</span></a>
+    <span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false' href='https://www.apple.com/privacy/'><span
+        class='foot'>Privacy
+        Policy</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+      href='https://www.apple.com/legal/internet-services/icloud/'><span class='foot'> Terms &amp;
+        Conditions</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class='foot'>Copyright
+      &copy; 2020 Bikram
+      Chatterjee. All rights reserved.</span>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
+		rel='stylesheet'>
+	<link rel='icon' href='Images/logo.png' />
+	<link href='home.css' rel='stylesheet'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src="js//Plugins/jquery.cookie-1.4.1.min.js"></script>
+	<script>
+		if (!$.cookie('logged')) {
+			alert('You are Not logged in! Redirecting to Login Page!');
+			document.location = 'index.html';
+		}
+	</script>
+	<script src='js/purchased.js' defer></script>
+	<title>Purchased</title>
+</head>
+
+<body>
+	<header>
+		<div id='head'>
+			<div class='head_txt' id='head_one' draggable='false'>
+				<img draggable='false' style='margin-right: 8px;' src='Images/logo.png' alt='logo' height='30px'>
+				Mac App Store
+			</div>
+			<a href='home.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Home
+				</div>
+			</a>
+			<a href='music.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Music
+				</div>
+			</a>
+			<a href='purchased.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Purchased
+				</div>
+			</a>
+			<form method='post' action='sign_out.php' draggable='false'>
+				<input draggable='false' type='submit' style='background: none; border: none;'
+					onclick='localStorage.clear();' class='head_txt' value='Sign Out'>
+			</form>
+			<a href='' id='search_a' draggable='false'>
+				<div class='head_txt' id='search_app' draggable='false'>
+					<img style='margin-right: 8px' draggable='false' src='Images/search.png' alt='logo' height='19px'>
+					Search
+				</div>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<!-- <div id='search_head_container'>
+			<div id='search_head'>Purchased Apps
+				<hr>
+			</div>
+		</div>
+		<div id='search_results'>
+			<div class='search_results_elems'>
+				<img class='search_app_icon' draggable='false'
+					src='https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/ba/ae/04/baae04ff-9b77-ae6f-2d91-94d7c3900b98/source/512x512bb.png'
+					alt='app_icon'>
+				<div class='app_search_name'>Pages
+					<p class='app_search_sub'>Productivity</p>
+					<p class='app_search_dev'>Apple</p>
+				<a href='app.txt' download='Pages'><img type='button' class='download' alt='download'
+						src='Images/download.png'></a>
+			</div>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<div id='search_results'>
+				<div class='search_results_elems'><img class='search_app_icon' draggable='false'
+						src='https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/6f/9e/9b/6f9e9be8-f32b-34fe-c0d8-321f57eb0529/source/512x512bb.png'
+						alt='app_icon'>
+					<div class='app_search_name'>iMovie<p class='app_search_sub'>Photo & Video</p>
+						<p class='app_search_dev'>Apple</p>
+					</div><a href='app.txt' download='iMovie'><img type='button' class='download' alt='download'
+							src='Images/download.png'></a>
+				</div>
+			</div> -->
+
+	</main>
+	<footer draggable='false'>
+		<a href='https://appleid.apple.com/faq' draggable='false'>
+			<span class='foot'>FAQ</span></a> <span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/support/systemstatus/'><span class='foot'>System Status</span></a>
+		<span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/privacy/'><span class='foot'>Privacy
+				Policy</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/legal/internet-services/icloud/'><span class='foot'> Terms &amp;
+				Conditions</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class='foot'>Copyright
+			&copy; 2020 Bikram
+			Chatterjee. All rights reserved.</span>
+	</footer>
+</body>
+</body>
+
+</html>

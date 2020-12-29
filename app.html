@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
+		rel='stylesheet'>
+	<link rel='icon' href='Images/logo.png' />
+	<link href='app.css' rel='stylesheet'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src='js/app.js' defer></script>
+	<script>
+		if (!$.cookie('logged')) {
+			alert('You are Not logged in! Redirecting to Login Page!');
+			document.location = 'index.html';
+		}
+	</script>
+	<title>Mac App Store Preview</title>
+</head>
+
+<body>
+	<header>
+		<div id='head'>
+			<div class='head_txt' id='head_one' draggable='false'>
+				<img draggable='false' style='margin-right: 8px;' src='Images/logo.png' alt='logo' height='30px'>
+				Mac App Store
+			</div>
+			<a href='home.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Home
+				</div>
+			</a>
+			<a href='music.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Music
+				</div>
+			</a>
+			<a href='purchased.html' draggable='false'>
+				<div class='head_txt' draggable='false'>
+					Purchased
+				</div>
+			</a>
+			<form method='post' action='sign_out.php' draggable='false'>
+				<input draggable='false' type='submit' style='background: none; border: none;'
+					onclick='localStorage.clear();' class='head_txt' value='Sign Out'>
+			</form>
+			<a href='' id='search_a' draggable='false'>
+				<div class='head_txt' id='search_app' draggable='false'>
+					<img style='margin-right: 8px' draggable='false' src='Images/search.png' alt='logo' height='19px'>
+					Search
+				</div>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<!--Demo App-->
+		<!-- <div id='app_head_container'> <div id='app_head'> Mac App Store&nbsp;<span id='app_head_preview'>Preview</span> <hr class='hr_app'> </div> </div> <div class='app_title_container'> <img class='app_icon_container' src='Images/a.png'> <div class='app_title_info'> <div class='app_title'> iMovie <span class='age_rating'>4+</span> </div> <div class='app_category'> Photo & Video </div> <div class='app_publisher'> Apple </div> <img class='app_rating' src='Images/App/rating.png' alt='app_icon' class='rating'> <div class='app_price'> Free </div> <div  class='add_cart_button'> Get Now </div> </div> </div> <div class='app_screenshot_container'> <hr class='hr_app' style='margin-bottom:19px'> <p class='app_screenshot_title'> Screenshots </p> <div class='app_screenshots'> <img src='Images/App/sc.jpg' class='app_screen'> <img src='Images/App/sc.jpg' class='app_screen'> <img src='Images/App/sc.jpg' class='app_screen'> <img src='Images/App/sc.jpg' class='app_screen'> <img src='Images/App/sc.jpg' class='app_screen'> <img src='Images/App/sc.jpg' class='app_screen'> <img src='Images/App/sc.jpg' class='app_screen'> </div> </div> <div class='app_desc_container'> <div class='app_desc_div'> <hr class='hr_app' style='margin-bottom:19px'> <p class='app_desc'> With a streamlined design and intuitive editing features, iMovie lets you create Hollywood-style trailers and beautiful movies like never before. Browse your video library, share favorite moments, and create beautiful movies that you can edit at resolutions up to 4K. You can even start editing movies on an iPhone or iPad, and finish them on a Mac. </p> </div> </div> <div class='app_desc_container'> <div class='app_desc_div'> <hr class='hr_app' style='margin-bottom:19px'> <p class='app_release_head'> What's New </p> <div class='release_notes' style=' padding-top:15px'> Improved performance and efficiency on Mac computers with Apple silicon </div> </div> </div> <div class='app_desc_container'> <div class='app_desc_div'> <hr class='hr_app' style='margin-bottom:19px'> <p class='app_release_head'> Information </p> <div class='info_container'> <div class='info_left_div'> <p class='info_left'>Seller</p> <p class='info_left'>Category</p> <p class='info_left'>Compatibility</p> <p class='info_left'>Age Rating</p> <p class='info_left'>Price</p> </div> <div class='info_right_div'> <p class='info_right'>Apple Inc</p> <p class='info_right'>Photo & Video</p> <p class='info_right'>macOS 10.15.6 or later</p> <p class='info_right'>4+</p> <p class='info_right'>Free</p> </div> </div> </div> </div>-->
+	</main>
+
+	<footer draggable='false'>
+		<a href='https://appleid.apple.com/faq' draggable='false'>
+			<span class='foot'>FAQ</span></a> <span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/support/systemstatus/'><span class='foot'>System Status</span></a>
+		<span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/privacy/'><span class='foot'>Privacy
+				Policy</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/legal/internet-services/icloud/'><span class='foot'> Terms &amp;
+				Conditions</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class='foot'>Copyright
+			&copy; 2020 Bikram
+			Chatterjee. All rights reserved.</span>
+	</footer>
+</body>
+
+</html>

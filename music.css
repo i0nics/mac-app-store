@@ -1,0 +1,306 @@
+* {
+	color: white;
+	font-family: Montserrat, 'sf', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	margin: 0px;
+}
+
+html,
+body {
+	background: url('Images/Login/back.png');
+	background-position: center center;
+	background-size: cover;
+	color: white;
+	height: 100%;
+	margin: 0px;
+	min-height: 890px;
+	min-width: 1000px;
+}
+
+a {
+	text-decoration: none
+}
+
+header {
+	background-color: #202122;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-height: 44px;
+	align-items: center;
+}
+
+#head {
+	align-items: center;
+	display: flex;
+	width: 1023px;
+	min-width: 1023px;
+	height: 44px;
+}
+
+.head_txt {
+	align-items: center;
+	display: flex;
+	font-size: 14px;
+	height: 44px;
+	margin-right: 51.1px;
+	margin-left: 51.1px;
+	min-height: 44px;
+	opacity: 80%;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+#head_one {
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 21px;
+}
+
+.head_txt:hover {
+	opacity: 100%;
+}
+
+#search_div {
+	align-items: center;
+	display: flex;
+	width: 1000px;
+}
+
+#search_input {
+	border: 0px;
+	background-color: transparent;
+	font-size: 14px;
+	height: 40px;
+	outline: none;
+	width: 93%;
+}
+
+main {
+	align-items: center;
+	display: flex;
+	font-size: 50px;
+	flex-direction: column;
+	min-height: 91.2%;
+	width: 100%;
+}
+
+#search_head_container {
+	align-items: center;
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	margin-bottom: 17px;
+	width: 100%;
+}
+
+#search_head {
+	align-items: center;
+	color: #E0E0E0;
+	font-size: 21px;
+	font-weight: 600;
+	letter-spacing: .1889999955892563px;
+	line-height: 50px;
+	min-width: 980px;
+}
+
+#search_results {
+	position: relative;
+	font-size: 0px;
+	width: 995px;
+	margin: 0px;
+	height: 100%;
+}
+
+.search_results_elems {
+	align-items: center;
+	border: 0px;
+	display: inline-flex;
+	font-size: 0px;
+	height: 120px;
+	margin-bottom: 70px;
+	margin-right: 0px;
+	max-width: 400px;
+	max-height: 120px;
+	width: 450px;
+}
+
+.search_app_icon {
+	font-size: 0px;
+	height: 76px;
+	width: 76px;
+	min-width: 76px;
+	margin-right: 20px;
+}
+
+.app_search_name {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	height: 100%;
+	justify-content: center;
+	width: 85%;
+	max-width: 85%;
+	overflow: scroll;
+}
+
+.app_search_sub {
+	color: #98989D;
+	font-size: 14px;
+	margin-top: 3px;
+}
+
+.app_search_dev {
+	color: #0884FF;
+	font-size: 11px;
+	margin-top: 3px;
+}
+
+.view_app {
+	background-color: white;
+	border: 0px;
+	border-radius: 100px;
+	color: #0884FF;
+	font-family: sans-serif, Arial, Helvetica;
+	font-size: 16px;
+	height: 30px;
+	line-height: 15px;
+	margin-left: 15px;
+	opacity: 85%;
+	padding-top: 6px;
+	width: 88px;
+}
+
+.view_app:hover {
+	background-color: #0884FF;
+	color: white;
+}
+
+.download {
+	border: 0px;
+	color: #0884FF;
+	height: 40px;
+	position: relative;
+	left: -5px;
+	padding-top: 6px;
+
+}
+
+#music_search {
+	background-color: #4E4F4F;
+	border: 0px;
+	border-radius: 100px;
+	font-family: sf;
+	font-size: 18px;
+	line-height: 40px;
+	letter-spacing: 0.2px;
+	outline: none;
+	position: relative;
+	padding-left: 50px;
+	padding-right: 20px;
+	top: -50px;
+	width: 500px;
+}
+
+#music_search:hover {
+	box-shadow: 0px 0px 5px 5px #EC4D56;
+}
+
+#music_search::placeholder {
+	color: #8A8A8B
+}
+
+music {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+#music_header {
+	color: #cdcdcd;
+	font-family: Montserrat, sf, sans-serif;
+	font-size: 30px;
+	height: 50px;
+	min-width: 1300px;
+	max-width: 1300px;
+	text-align: left;
+	width: 1100px;
+	border-bottom: 1px solid;
+}
+
+#music_main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+	top: -10px;
+	width: 100%;
+}
+
+#music_main_content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	max-width: 1300px;
+	min-height: 300px;
+	width: 1300px;
+}
+
+.music_content {
+	display: inline-block;
+	width: 240px;
+	height: 300px;
+}
+
+.album_art {
+	width: 240px;
+	height: 230px
+}
+
+.song_title {
+	font-family: Montserrat, sf, sans-serif;
+	font-size: 16px;
+	color: #cdcdcd;
+	position: relative;
+	top: 0px
+}
+
+.artist {
+	color: #989898;
+	font-family: Montserrat, sf, sans-serif;
+	font-size: 14px;
+	position: relative;
+	top: px
+}
+
+footer {
+	align-items: center;
+	color: #808080;
+	display: flex;
+	height: 19px;
+	justify-content: center;
+	padding-bottom: 15px;
+	padding-top: 5px;
+	line-height: 0px;
+}
+
+hr {
+	height: 10px;
+	border: 0;
+	border-top: 1px solid #4e4b4b;
+}
+
+.foot {
+	color: #808080;
+}
+
+@font-face {
+	font-family: sf;
+	src: url('Fonts/SFProDisplay-Regular.ttf')
+}

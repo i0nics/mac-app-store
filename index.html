@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
+		rel='stylesheet'>
+	<link rel='icon' href='Images/logo.png' />
+	<link href='login.css' rel='stylesheet'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src="js//Plugins/jquery.cookie-1.4.1.min.js"></script>
+	<script>
+		if (!!$.cookie('logged')) {
+			alert('You are already logged in! Redirecting to Home Page!');
+			document.location = 'home.html';
+		}
+	</script>
+	<script src='js/login.js' defer></script>
+	<title>Mac App Store</title>
+</head>
+
+<body>
+	<header><a href='https://apple.com'><img id='head_img' src='Images/logo_w.png' alt='logo' height='19px'></a>
+		<div style='width:100%'><a href='https://support.apple.com/guide/app-store/welcome/mac'><img draggable='false'
+					id='faq_logo' src='Images/Login/faq.png' alt='logo' height=26px></a></div>
+	</header>
+	<hr>
+	<main>
+		<img src='Images/logo.png' draggable='false' alt='logo' height='200px'>
+		<p class='login'>Sign in to Mac App Store</p>
+		<form style='height: 84px' method='post' action='form.php'>
+			<input type='text' placeholder='Apple ID' id='in_email' name='in_email' required>
+			<input type='password' placeholder='Password' id='in_pass' name='in_pass' required>
+			<input type='hidden' name='state' value='signin' />
+			<input type='image' id='submit_login' src='Images/Login/s_button.png' height=25px width=25px
+				alt='submit_login' />
+		</form>
+		<p class='login' style='font-size: 14px'>Don't have an Apple ID?&nbsp;<a href='' onclick='return false;'><span
+					id='create_one'>Create one!</span></a></p>
+	</main>
+	<footer draggable='false'>
+		<a href='https://appleid.apple.com/faq' draggable='false'>
+			<span class='foot'>FAQ</span></a> <span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/support/systemstatus/'><span class='foot'>System Status</span></a>
+		<span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/privacy/'><span class='foot'>Privacy
+				Policy</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a draggable='false'
+			href='https://www.apple.com/legal/internet-services/icloud/'><span class='foot'> Terms &amp;
+				Conditions</span></a><span class='foot'>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class='foot'>Copyright
+			&copy; 2020 Bikram
+			Chatterjee. All rights reserved.</span>
+	</footer>
+</body>
+</body>
+
+</html>
