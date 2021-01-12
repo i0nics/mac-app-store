@@ -1,3 +1,8 @@
+// Programmer: Bikram Chatterjee
+// Mac App Store
+// app.js
+
+// Original HTML content
 var head_og = "<div id='head'> <div class='head_txt' id='head_one'  draggable='false'> <img  draggable='false' style='margin-right: 8px;' src='Images/logo.png' alt='logo' height='30px'> Mac App Store </div> <a href='home.html'  draggable='false'> <div class='head_txt'  draggable='false'> Home </div> </a> <a href='music.html'  draggable='false'> <div class='head_txt'  draggable='false'> Music </div> </a> <a href='purchased.html'  draggable='false'> <div class='head_txt'  draggable='false'> Purchased </div> </a> <form method='post' action='sign_out.php'  draggable='false'> <input  draggable='false' type='submit' style='background: none; border: none;' onclick='localStorage.clear();' class='head_txt' value='Sign Out'> </form> <a href='' id='search_a' draggable='false'> <div class='head_txt' id='search_app' draggable='false'> <img style='margin-right: 8px' draggable='false' src='Images/search.png' alt='logo' height='19px'> Search </div> </a> </div>";
 var head_search = "<div id='search_div' draggable='false'> <img id='search_icon' draggable='false' style='margin-left: 21px; margin-right: 8px' src='Images/search.png' alt='logo' height='19px'> <input id='search_input' draggable='false' placeholder='Search Mac App Store'> <img id='cross' draggable='false' style='margin-left: 4px' src='Images/cross.png' alt='logo' height='19px'> </div>";
 var main_search = "<div id='search_head_container'><div id='search_head'></div></div><div id='search_results'></div>";
@@ -7,77 +12,51 @@ var div = '';
 var app_page = '';
 var price = '';
 
+// Utilizes AJAX to fetch user desired app data from iTunes API and insert it into HTML
 function search_apps(search_value) {
 	$('main').html(main_search);
 	$('#search_head').html('Search results for "' + search_value + '"' + "<hr>");
 	url = 'http://itunes.apple.com/search?entity=macSoftware&callback=?&term=' + search_value;
-	// url = 'https://itunes.apple.com/search?term=' + search_value + "&entity=macSoftware";
+
+	// Retrieve user desired app data in JSON format from iTunes API using AJAX
 	$.getJSON(url, function (data) {
+
+		// No results found
 		if (data.results.length == 0) {
 			$('#search_results').append('<p style="font-size: 16px; margin-left: 8px">No Results Found!</p>');
-		} else {
+		} 
+		
+		// Append user desired app data to HTML
+		else {
 			$.each(data.results, function (i, field) {
 				div = "<div class='search_results_elems'><input type='hidden' name='app_id' value='" + field.trackId + "' /><img class='search_app_icon'  draggable='false' src='";
 				div += field.artworkUrl512 + "' alt='app_icon'> <a style='width:200px' href=''><div class='app_search_name'>";
 				div += field.trackName + "<p class='app_search_sub'>" + field.primaryGenreName + "</p> <p class='app_search_dev'>";
 				div += field.artistName + "</p></div><a href='app.html'></a><button class='view_app' value='" + field.trackId + "'>VIEW</button></a></div>";
+				
 				if (i % 2 == 0) {
 					div += "<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>";
 				}
+
 				$('#search_results').append(div);
 			});
 		}
 	});
 
+	// Brings back the menu bar when user clicks the cross icon
 	$('header').on('click', '#cross', function () {
 		$('#head').html(head_og);
 		$('main').html(app_page);
 	});
 }
 
-// artistId: 284417353
-// artistName: "Apple"
-// artistViewUrl: "https://apps.apple.com/us/developer/apple/id284417353?mt=12&uo=4"
-// artworkUrl60: "https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/6f/9e/9b/6f9e9be8-f32b-34fe-c0d8-321f57eb0529/source/60x60bb.png"
-// artworkUrl100: "https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/6f/9e/9b/6f9e9be8-f32b-34fe-c0d8-321f57eb0529/source/100x100bb.png"
-// artworkUrl512: "https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/6f/9e/9b/6f9e9be8-f32b-34fe-c0d8-321f57eb0529/source/512x512bb.png"
-// averageUserRating: 0
-// averageUserRatingForCurrentVersion: 0
-// bundleId: "com.apple.iMovieApp"
-// contentAdvisoryRating: "4+"
-// currency: "USD"
-// currentVersionReleaseDate: "2020-11-13T00:28:30Z"
-// description: "With a streamlined design and intuitive editing features, iMovie lets you create Hollywood-style trailers and beautiful movies like neve…"
-// fileSizeBytes: "2182889509"
-// formattedPrice: "Free"
-// genreIds: ["6008"] (1)
-// genres: ["Photo & Video"] (1)
-// isVppDeviceBasedLicensingEnabled: true
-// kind: "mac-software"
-// languageCodesISO2A: ["CA", "HR", "CS", "DA", "NL", "EN", "FI", "FR", "DE", "EL", …] (30)
-// minimumOsVersion: "10.15.6"
-// price: 0
-// primaryGenreId: 6008
-// primaryGenreName: "Photo & Video"
-// releaseDate: "2011-01-05T01:49:58Z"
-// releaseNotes: "• Improved performance and efficiency on Mac computers with Apple silicon"
-// screenshotUrls: ["https://is4-ssl.mzstatic.com/image/thumb/PurpleSou…d-b7d4-2d6e0e28f0ae_1-Hero-13in.png/800x500bb.jpg", "https://is3-ssl.mzstatic.com/image/thumb/PurpleSou…-a6f3-d74a9b92bd7c_2-Audio-13in.png/800x500bb.jpg", "https://is3-ssl.mzstatic.com/image/thumb/PurpleSou…71f02dae0712_3-Greenscreen-13in.png/800x500bb.jpg", "https://is5-ssl.mzstatic.com/image/thumb/PurpleSou…bf9-3e840869aa91_4-Trailer-13in.png/800x500bb.jpg", "https://is5-ssl.mzstatic.com/image/thumb/PurpleSou…7d-1c3dacad6e46_5-Sharing-13oin.png/800x500bb.jpg"] (5)
-// sellerName: "Apple Inc."
-// sellerUrl: "http://www.apple.com/imovie/"
-// trackCensoredName: "iMovie"
-// trackContentRating: "4+"
-// trackId: 408981434
-// trackName: "iMovie"
-// trackViewUrl: "https://apps.apple.com/us/app/imovie/id408981434?mt=12&uo=4"
-// userRatingCount: 0
-// userRatingCountForCurrentVersion: 0
-// version: "10.2.1"
-// wrapperType: "software"
-
+// Utilizes AJAX to fetch user desired app data from iTunes API and insert it into HTML
 function lookup() {
 	app_id = localStorage.getItem('app_id');
 	purchases = localStorage.getItem('p_id');
 	is_purchased = false;
+
+	// Check if desired app is already purchased
 	if (purchases != null) {
 		purchases = purchases.split('_');
 		$.each(purchases, function (i, p) {
@@ -86,14 +65,21 @@ function lookup() {
 			}
 		});
 	}
-
+	
+	// Retrieves user desired app data from iTunes API and insert it into HTML
 	if (app_id != null) {
 		url = 'http://itunes.apple.com/lookup?callback=?&id=' + app_id;
+
+		// Retrieve user desired app data in JSON format from iTunes API using AJAX
 		$.getJSON(url, function (data) {
-			console.log(data);
+	
+			// iTunes server error due to multiple requests
 			if (data.results.length == 0) {
 				$('main').html("<div style='display: flex; height: 800px; width:100%; justify-content: center; align-items: center;'><p style='font-size: 20px;'>iTunes Server Not Responding. Try Again or Comment out the Demo Code in the app.html File</p>");
-			} else {
+			} 
+			
+			// Append desired app data to HTML
+			else {
 				$.each(data.results, function (i, field) {
 					price = field.formattedPrice;
 					div = "<div id='app_head_container'> <div id='app_head'> Mac App Store&nbsp;<span id='app_head_preview'>Preview</span> <hr class='hr_app'> </div></div>";
@@ -129,6 +115,7 @@ function lookup() {
 	}
 }
 
+// Save purchased app ID to local storage
 function add_purchase(purchase_id) {
 	app_id = localStorage.getItem('p_id');
 	if (app_id == null) {
@@ -139,33 +126,46 @@ function add_purchase(purchase_id) {
 };
 
 $(function () {
+	// Initialize
 	lookup();
-	console.log(localStorage.getItem('app_id'));
+	
+	// Checks if user has clicked on the search icon and dynamically changes the menu bar to display the search bar
 	$('header').on('click', '#search_a', function (e) {
 		e.preventDefault();
 		$('#head').html(head_search);
 		$('#search_input').focus();
 	});
 
-	// Sanitize Input
+	// Checks Checks if user has clicked on the cross icon and dynamically changes the search bar to display the menu bar
+	$('header').on('click', '#cross', function () {
+		$('#head').html(head_og);
+	});
+
+	// Sanitize user input
 	$('header').on('click', '#search_icon', function () {
 		search_apps($('#search_input').val().replace(/<\/?[^>]+(>|$)/g, ""));
 	});
 
+	// Check if user has pressed enter key in the search bar, sanitize user input, and call the search_apps func
 	$('header').on('keyup', '#search_input', function (e) {
 		if (e.key === 'Enter' || e.keyCode === 13) {
 			search_apps($('#search_input').val().replace(/<\/?[^>]+(>|$)/g, ""));
 		}
 	});
 
-	$('header').on('click', '#cross', function () {
-		$('#head').html(head_og);
-	});
-
+	// Upon clicking the view button, the app ID of the app that the user wishes to view is stored in local storage
 	$('main').on('click', '.view_app', function (e) {
 		localStorage.setItem('app_id', this.value);
 	});
 
+	// Upon clicking anywhere in the app area, the app ID of the app that the user wishes to view is stored in local storage and the app page is loaded
+	$('main').on('click', '.search_results_elems', function () {
+		localStorage.setItem('app_id', $(this).find('input').attr('value'));
+		document.location.href = 'app.html';
+	})
+
+	// If user clicks buy button, app ID of purchased app is saved in local storage and a window showing purchase confirmation and app price pops up
+	// Additionally, buy button is replaced by a non clickable purchased button
 	$('main').on('click', '.add_cart_button', function (e) {
 		add_purchase(app_id);
 		$(this).removeClass('add_cart_button');
@@ -173,9 +173,4 @@ $(function () {
 		$(this).addClass('purchased_button');
 		alert('Purchase Complete! (Total Amount: ' + price + ') Go to the Purchased Page to Download!');
 	});
-
-	$('main').on('click', '.search_results_elems', function () {
-		localStorage.setItem('app_id', $(this).find('input').attr('value'));
-		document.location.href = 'app.html';
-	})
 });

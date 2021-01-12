@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -10,6 +9,7 @@
 	<link href='app.css' rel='stylesheet'>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 	<script src='js/app.js' defer></script>
+	<!-- Redirects user to login page if user is not logged in -->
 	<script>
 		if (!$.cookie('logged')) {
 			alert('You are Not logged in! Redirecting to Login Page!');
@@ -18,7 +18,6 @@
 	</script>
 	<title>Mac App Store Preview</title>
 </head>
-
 <body>
 	<header>
 		<div id='head'>
@@ -72,5 +71,4 @@
 			Chatterjee. All rights reserved.</span>
 	</footer>
 </body>
-
 </html>

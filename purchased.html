@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
 	<meta charset='UTF-8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
 		rel='stylesheet'>
-	<link rel='icon' href='Images/logo.png' />
+	<link rel='icon' href='Images/logo.png'>
 	<link href='home.css' rel='stylesheet'>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 	<script src="js//Plugins/jquery.cookie-1.4.1.min.js"></script>
+	<!-- Redirects user to login page if user is not logged in -->
 	<script>
 		if (!$.cookie('logged')) {
 			alert('You are Not logged in! Redirecting to Login Page!');
@@ -19,7 +19,6 @@
 	<script src='js/purchased.js' defer></script>
 	<title>Purchased</title>
 </head>
-
 <body>
 	<header>
 		<div id='head'>
@@ -54,8 +53,8 @@
 			</a>
 		</div>
 	</header>
-
 	<main>
+		<!-- TEST -->
 		<!-- <div id='search_head_container'>
 			<div id='search_head'>Purchased Apps
 				<hr>
@@ -83,7 +82,6 @@
 							src='Images/download.png'></a>
 				</div>
 			</div> -->
-
 	</main>
 	<footer draggable='false'>
 		<a href='https://appleid.apple.com/faq' draggable='false'>
@@ -99,5 +97,4 @@
 	</footer>
 </body>
 </body>
-
 </html>
