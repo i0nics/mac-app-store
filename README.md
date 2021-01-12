@@ -1,4 +1,5 @@
 <h1>Mac App Store</h1>
+<img src='Screenshots/home.png'>
 <p>The Mac App Store website aims to be a hub for users to discover absolutely any app available on the actual Mac App Store and at the same time, serve as a place where they can find songs via a dedicated Apple Music Section. Users can also download their purchased apps from a dedicated purchased section. The Mac App Store’s minimalistic design coupled with its features such featured, top charts, categories, search, and Apple Music will help users find their next app or song in no time.
 </p>
 <h1>Implementation Specifications</h1>
