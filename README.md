@@ -35,7 +35,7 @@
   <li><b>Purchases Page:</b> This page dynamically changes back and forth between itself and the search page according to the user’s actions.</li>
 </ul>
 <h2>API/AJAX</h2>
-<p>The iTunes API is accessed using a AJAX method to retrieve data about all apps and songs across the website which is then inserted into html code via jQuery.
+<p>The iTunes API is accessed using a AJAX method to retrieve data about all apps and songs across the website which is then inserted into HTML code via jQuery.
 </p>
 <h2>Scrolling</h2>
 <p>Clicking the left and right buttons in the Home Page will smoothly scroll the content left and right. The buttons will also fade and reappear according to the content’s position.</p>
