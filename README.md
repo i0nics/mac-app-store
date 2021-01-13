@@ -14,6 +14,7 @@
 </ul>
 <h1>Logic Design</h1>
 <h2>User Authentication (Login/Registration)</h2>
+<img src='Screenshots/login.png'>
 <ul>
   <li>PHP is used to store credentials in session cookies after user registers for a new account.</li>
   <li>Bycrypt is used to hash and store the password submitted by the user during registration. When the user wishes to sign in, the stored hash is compared with the new hash to authorize the user.</li>
@@ -21,6 +22,7 @@
   <li>The user is not allowed to go back to the Sign in/Registration Page until the user is logged out. The user is also not allowed to go to any other page except the login/registration page unless the user is signed in.</li>
 </ul>
 <h2>Dynamic Webpages</h2>
+<img src='Screenshots/app.png'>
 <ul>
   <li><b>Login/Registration:</b> If the user clicks on the “Create One!” link to register a new account, a new registration window will pop up and replace the existing login body. Closing the registration window will make it disappear and show the login window again.
   </li>
@@ -36,9 +38,12 @@
   <li><b>Purchases Page:</b> This page dynamically changes back and forth between itself and the search page according to the user’s actions.</li>
 </ul>
 <h2>API/AJAX</h2>
+<img src='Screenshots/search.png'>
 <p>The iTunes API is accessed using a AJAX method to retrieve data about all apps and songs across the website which is then inserted into HTML code via jQuery.
 </p>
 <h2>Scrolling</h2>
+<img src='Screenshots/home-scroll.png'>
 <p>Clicking the left and right buttons in the Home Page will smoothly scroll the content left and right. The buttons will also fade and reappear according to the content’s position.</p>
 <h2>Local Storage</h2>
+<img src='Screenshots/purchased.png'>
 <p>Information about the app page the user wants to visit or the apps that the user has purchased is stored in the local storage and is used by various pages to retrieve that specific app data.</p>
