@@ -46,4 +46,4 @@
 <p>Clicking the left/right buttons in the Home Page will scroll the content left and right. The buttons will also seamlessly fade or reappear according to the content’s position which can be changed by either clicking the left/right button or even initiating a manual horizontal scroll.</p>
 <h2>Local Storage</h2>
 <img src='Screenshots/purchased.png'>
-<p>Information about the app page the user wants to visit or the apps that the user has purchased is stored in the local storage and is used by various pages to retrieve that specific app data.</p>
+<p>Information about the app that the user wishes to visit or the apps that the user has purchased is stored in local storage and is used by various pages to retrieve that specific app's data.</p>
