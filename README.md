@@ -44,6 +44,7 @@
 </ul>
 <h3 id='l2'>Dynamic Webpages</h3>
 <img src='Screenshots/app.png'>
+<img src='Screenshots/music.png'>
 <ul>
   <li><b>Login/Registration:</b> If the user clicks on the “Create One!” link to register a new account, a new registration window will pop up and replace the existing login body. Closing the registration window will make it disappear and show the login window again.
   </li>
