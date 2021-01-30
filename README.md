@@ -14,6 +14,8 @@
     - [API & AJAX](#l3)
     - [Scrolling](#l4)
     - [Local Storage](#l5)
+- [Requirements](#license)
+- [Getting Started](#start)
 - [License](#license)
 - [Acknowledgements](#ack)
 
@@ -70,7 +72,7 @@
 
 * [PHP](http://php.net)
 
-<h2 'start'>Getting Started</h2>
+<h2 id='start'>Getting Started</h2>
 
 * Download all files from the repo
 * Extract the zip folder to the PHP folder/server
