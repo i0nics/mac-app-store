@@ -14,7 +14,7 @@
     - [API & AJAX](#l3)
     - [Scrolling](#l4)
     - [Local Storage](#l5)
-- [Requirements](#license)
+- [Requirements](#req)
 - [Getting Started](#start)
 - [License](#license)
 - [Acknowledgements](#ack)
