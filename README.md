@@ -3,7 +3,7 @@
 <br>
 <p  align='center'><img src='Images/logo.png' alt="Logo" width="200" height="200"></p>
 <h1 align='center' > Mac App Store</h1>
-<p align='center'>A website for users to discover and search for macOS apps and music</p>
+<p align='center'>A dynamic website for users to discover and search for macOS apps and music</p>
 <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
 
 - [About The Project](#about)
