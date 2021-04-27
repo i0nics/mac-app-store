@@ -151,7 +151,6 @@ main {
 	justify-content: center;
 	width: 85%;
 	max-width: 85%;
-	overflow: scroll;
 }
 
 .app_search_sub {
