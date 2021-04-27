@@ -146,8 +146,7 @@ footer {
 	box-sizing: border-box;
 	display: block;
 	min-height: 527px;
-	width: 640px;
-	overflow: scroll
+	width: 640px
 }
 
 #reg_logo {
