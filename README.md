@@ -82,6 +82,7 @@
 </p>
 <h2 id='license'>License</h2>
 <p>Distributed under the MIT License.</p>
+
 <h2 id='ack'>Acknowledgements</h2>
 
 * [Apple Inc.](http://apple.com)
