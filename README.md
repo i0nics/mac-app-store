@@ -4,6 +4,7 @@
 <p  align='center'><img src='Images/logo.png' alt="Logo" width="200" height="200"></p>
 <h1 align='center' > Mac App Store</h1>
 <p align='center'>A dynamic website for users to discover and search for macOS apps and music</p>
+<p align='center' style='color: #0000EE;'><a style='color: #0000EE;' href="https://i0nics.github.io/mac-app-store-website/home.html">Check out the website here!</a></p>
 <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
 
 - [About The Project](#about)
@@ -75,9 +76,12 @@
 
 <h2 id='start'>Getting Started</h2>
 
+[here](https://i0nics.github.io/mac-app-store-website/home.html)
+
 * Download all files from the repo
 * Extract the zip folder to the PHP folder/server
 * Open index.html via localhost</li>
+
 
 </p>
 <h2 id='license'>License</h2>
